@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition:.2s linear; 
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #707070;
+    background-color: #ffffff;
+}
+
+html{
+     font-size: 62.5%; 
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 9%;
+}
+
+.btnn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5px;
+    background: #96005A;
+    color:#fff;
+    padding: .9rem 3.5rem;
+    cursor:pointer;
+    font-size: 1.7rem;
+}
+
+.btnn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+
+header{
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: #96005A;
+}
+
+header .iconss a{
+    font-size: 2.5rem;
+    color: #707070;
+    margin-left: 2rem;
+}
+
+header .iconss a:hover{
+    color: #96005A;
+} 
+
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+} 
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: url(../implanteDental/img/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.home::before {
+    content: "";
+    background-color: #96005a3b; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* el fondo con opacidad queda detrás del contenido */
+}
+
+.home .content {
+    max-width: 50rem;
+    position: relative;
+    z-index: 2; /* para que el contenido quede por encima con el fondo con opacidad */
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    font-weight: 100;
+    color: #ffffff; 
+}
+
+.home .content .btn {
+    background-color: #96005A; 
+    color: #ffffff; 
+}
+
+
+.home .content span{
+    font-size: 3.5rem;
+    color: #96005A;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/*Contenedor 1*/
+
+.secundaria {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    color: black;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h5 {
+    text-align: center;
+    color: #96005a;
+    font-weight: lighter;
+    font-size: 20px;
+     
+}
+
+.servicios{
+    font-size: 50px;
+     width: 100%;
+     text-align: center;
+     font-weight: lighter;
+     margin-bottom: 40px;
+ }
+.contenido {
+    display: flex;
+    align-items: center; 
+}
+
+.imagen {
+    max-height: 100%;
+    max-width: 30%;
+    margin-right: 40px; 
+}
+
+.descripcion {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+
+/*Contenedor 2*/
+
+
+.secundaria1{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    color: black;
+}
+
+.cont1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 800px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 30px;
+    justify-content: space-between; /*espacio entre los contenedores*/
+    padding: 20px; /* Margen interno del contenedor principal */
+    background-color: #F2E0EB;
+ 
+}
+
+h5{
+    
+    width: 100%;
+    text-align: center;
+    color: #96005a;
+    font-weight: lighter;
+    font-size: 20px;
+    
+}
+
+
+.servicios{
+   font-size: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    
+}
+  
+.info {
+    flex: 1;
+    margin: 20px; 
+    padding: 25px; 
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    height: 400px;
+    background-color: #ffffff;
+
+    
+}
+
+.grande{
+    font-size: 20px;
+}
+
+/*contenedor 3*/
+
+.secundaria2 {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    width: 100%;
+    height: 500px; 
+    color: black;
+}
+
+.cont2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 30px;
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+.servicioss{
+    font-size: 40px;
+    font-weight: 100;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+     
+ }
+
+.contenidoo {
+    flex:1;
+    text-align: left; 
+    padding: 30px;
+}
+
+.imagenn {
+    max-height: 80%;
+    max-width: 100%;
+    margin-right:20px; 
+    padding: 50px;
+}
+
+.descripcionn {
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*contenedor 4*/
+/* .secundaria3 {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    width: 100%;
+    height: 500px; 
+    color: black;
+}
+
+.cont3 {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+.imagen-grande {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; 
+}
+
+.imagen-pequena {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido {
+    flex: 1; 
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+} 
+
+/*FOOTER*/
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #F2E0EB;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #96005A;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:#96005A;
+    height: 2px;
+    box-sizing: border-box;
+    width:50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col  ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #707070;
+    text-decoration: none;
+    font-weight: 300;
+    color:#707070;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col  ul li a:hover{
+    color: #96005A;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #707070;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #96005A;
+    background-color: #ffffff;
+}
+
+.aFooter{
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    color: #96005A;
+    width: 70%;
+}
+
+
+
+
+
+
+

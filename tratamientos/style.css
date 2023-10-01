@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition:.2s linear; 
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #707070;
+    background-color: #ffffff;
+}
+
+html{
+     font-size: 62.5%; 
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 9%;
+}
+
+.btnn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5px;
+    background: #96005A;
+    color:#fff;
+    padding: .9rem 3.5rem;
+    cursor:pointer;
+    font-size: 1.7rem;
+}
+
+.btnn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+
+header{
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color:#333;
+    font-weight: bolder;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color: #96005A;
+}
+
+header .iconss a{
+    font-size: 2.5rem;
+    color: #707070;
+    margin-left: 2rem;
+}
+
+header .iconss a:hover{
+    color: #96005A;
+} 
+
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+} 
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: url(../tratamientos/img/grupo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.home::before {
+    content: "";
+    background-color: #96005a3b; /*fondo con opacidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Asegura que el fondo con opacidad esté detrás del contenido */
+}
+
+.home .content {
+    max-width: 50rem;
+    position: relative;
+    z-index: 2; /* el ocntenido queda por encima con el fondo con opacidad */
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    font-weight: 100;
+    color: #ffffff; /* Cambia el color del texto a blanco o el que desees */
+}
+
+.home .content .btn {
+    background-color: #96005A; 
+    color: #ffffff; 
+}
+
+
+.home .content span{
+    font-size: 3.5rem;
+    color: #96005A;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/*seccion para tratamientos*/
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 950px; /* Ajusta el ancho según tus necesidades */
+}
+
+.contenedor1 {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 950px; /* Ajusta el ancho según tus necesidades */
+}
+.imagen {
+    top: 70px;
+    left: 200px;
+    text-align: center;
+    position: relative;
+    width: 100%; 
+    
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.derecha{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay {
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #70707046;  
+    transition: opacity 0.3s ease;  
+}
+
+.imagen h2 {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 50px;
+    font-weight: 100;
+    color: white; 
+}
+
+.descripcion p{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.imagen:hover .overlay {
+    opacity: 1;
+    background-color: #96005a3b;
+}
+
+.imagen:hover h2 {
+    opacity: 0;
+}
+
+.imagen:hover .descripcion p {
+    opacity: 1;
+}
+
+.button{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: transparent;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight:100;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+    opacity: 0;
+    border-radius: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imagen:hover .descripcion .button {
+    opacity: 1;
+}
+
+.button:hover .imagen .descripcion{
+    transform: scale(1.05);
+  }
+  
+.button:hover .icon {
+    transform: translate(5px); /*para que el icono del boton tenga un leve traslado a la derecha*/
+}
+
+/*FOOTER*/
+
+.container{
+    
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    margin-top: 100px;
+    background-color: #F2E0EB;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #96005A;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:#96005A;
+    height: 2px;
+    box-sizing: border-box;
+    width:50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col  ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #707070;
+    text-decoration: none;
+    font-weight: 300;
+    color:#707070;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col  ul li a:hover{
+    color: #96005A;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #707070;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #96005A;
+    background-color: #ffffff;
+}
+
+.aFooter{
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    color: #96005A;
+    width: 70%;
+}
+
+
+/*Responsive*/
+
+/*responsive de header y Seccion de inicio */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%; 
+    }
+
+    header{
+        padding:2rem;
+
+    }
+
+    section{
+        padding:2rem;
+
+    }
+
+    .home{
+        background-position:left;
+    }
+}
+
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%; 
+    }
+
+
+}
+
+/*responsive seccion de Tratamientos*/
+
+@media screen and (max-width: 768px) {
+    .contenedor, .contenedor1 {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .imagen {
+        text-align: center;
+        position: relative;
+        width: 100%; /* Ajusta el ancho según tus necesidades */
+    }
+
+    .imagen img {
+        max-width:100%;
+        height: auto;
+        margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
+
+    .imagen h2 {
+        font-size: 30px;
+    }
+
+    .descripcion p {
+        font-size: 16px;
+    }
+}
+
+/* responsive footer */
+
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    
+    }
+}
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    
+    }
+}
+
+
+
