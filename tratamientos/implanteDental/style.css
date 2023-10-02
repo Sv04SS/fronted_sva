@@ -305,7 +305,7 @@ h5{
     max-height: 80%;
     max-width: 100%;
     margin-right:20px; 
-    padding: 50px;
+    padding: 17px;
 }
 
 .descripcionn {
@@ -317,31 +317,83 @@ h5{
 
 
 /*contenedor 4*/
-/* .secundaria3 {
+.secundaria3 {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: row;
-    margin-top: 200px;
+    flex-wrap: wrap; 
+    margin-top: 50px;
     width: 100%;
-    height: 500px; 
     color: black;
+    margin-bottom: 100px;
 }
 
-.cont3 {
+.cont-izquierdo3 {
     display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    width: 100%;
-    font-size: 30px;
-    background-color: #ffffff;
-    padding: 50px;
+    flex-direction: column;
+    padding-left: 70px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
-.imagen-grande {
-    max-width: 100%;
+.imagengrande {
+    width: 400px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.cont-derecho3 {
+    flex: 1; 
+    padding-left: 50px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+}
+
+.item2 {
+
+    display: flex;
+    margin-top: 95px;
+    flex-direction: row;
+    align-items: flex-start;
+    
+}
+
+
+.imagen-pequeña {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    
+    font-size: 24px;
+    margin: 0;
+}
+
+.descripcion2 {
+    font-size: 25px;
+    font-weight: lighter;
+    padding-left: 60px;
+    margin: 0;
+    
+}
+
+
+/* .imagengrande {
+    max-width: 40%;
     height: auto;
     margin-right: 20px; 
-}
+    margin-left: 80px;
+    
+} */
+/* 
+
+
 
 .imagen-pequena {
     max-width: 100%;
