@@ -908,7 +908,47 @@ hr{
 }
 
 /*Responsive contenedor 3*/
+@media (max-width: 768px) {
+    .secundaria2 {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        height: auto;
+    }
+    .cont-izquierdo2 {
+        width: 100%;
+        height: auto;
+        padding: 10px; /* Reduce el margen interno del contenedor principal */
+    }
+    .info {
+        flex-basis: calc(50% - 20px); /* Ajusta el tamaño de las cajas al 50% del ancho en pantallas pequeñas */
+        margin: 10px; /* Añade espacio entre las cajas */
+        padding: 20px; /* Reduce el margen interno de las cajas */
+        height: auto;
+    }
+    .boton-container {
+        text-align: center;
+        margin-top: 20px; /* Ajusta el espacio entre los divs y el botón */
+    }
+    .botonTratamiento {
+        margin-top: 20px; /* Ajusta el espacio superior del botón */
+    }
+    .servicios {
+        font-size: 40px; /* Reduce el tamaño del título */
+    }
+    .grande {
+        font-size: 18px; /* Reduce el tamaño del texto grande */
+    }
+    h5 {
+        font-size: 18px; /* Reduce el tamaño de los subtítulos */
+    }
 
+    .button-container {
+        text-align: center;
+    }
+    .button {
+        padding-inline: 0.5rem; /* Ajusta el espaciado horizontal del botón */
+        font-size: 12px; /* Ajusta el tamaño del texto del botón */
+    }
+}
 
 
 /*responsive contenedor 4*/
